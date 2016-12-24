@@ -1,0 +1,114 @@
+    body{
+	background-color:#f6f6f6;
+	background: url(../img/right.jpg) , url(../img/left.jpg);
+	background-repeat: repeat-y, repeat-y;
+    background-position: left, right;
+
+	}
+	
+	.login{
+	margin:0 25%;
+	}
+	
+	.page-header {
+    	background: url(../img/fruits.jpg) no-repeat center;
+        margin-top: 0;
+		background-color: #ff9400;
+        padding: 50px 20px 50px 40px;
+		min-height:40%;
+	}
+
+    .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+        color: #ffffff;
+		text-align:center;
+	    font-size: 36pt;
+        text-decoration: none;
+
+    }
+    .page-header.knopki{
+	font-size:400px;
+	}
+    .content {
+        margin: 0 40px;
+    }
+
+    h1  {
+        font-family: 'Lobster', cursive;
+	}
+	h2, h3, h4, p{
+        font-family: 'Forum';
+	}
+    h3{
+	   color:grey;
+	   font-size:14px;
+	} 	
+	
+	p{
+	font-size:24px;}
+
+    .date {
+        float: right;
+        color: #828282;
+    }
+
+    .save {
+        float: right;
+    }
+
+    .post-form textarea, .post-form input {
+        width: 100%;
+    }
+
+    .top-menu, .top-menu:hover, .top-menu:visited {
+        color: #ffffff;
+        float: right;
+        font-size: 26pt;
+        margin-right: 20px;
+		
+    }
+	
+
+
+    .post {
+        margin-bottom: 70px;
+    }
+
+    .post h1 a, .post h1 a:visited {
+        color: #000000;
+    }
+	
+	    h1 a {
+        color: #FCA205;
+    }
+
+	.comment {
+    margin: 20px 0px 20px 20px;
+}
+
+    .content_index p{
+	font-size:24px;
+	text-indent:50px;
+	text-align:justify;
+}
+
+	.content_index h2{
+	text-align:center;
+	text-shadow: 0 1px 0 #ccc,
+	               0 0 2px  #c9c9c9,
+	               0 0 3px  #bbb,
+	               0  0 4px  #b9b9b9,
+	               0 0 5px  #aaa,
+	               0 6px 1px rgba(0,0,0,.1),
+	               0 0 5px rgba(0,0,0,.1),
+	               0 1px 3px rgba(0,0,0,.3),
+	               0 3px 5px rgba(0,0,0,.2),
+	               0 5px 10px rgba(0,0,0,.25),
+	               0 10px 10px rgba(0,0,0,.2),
+	               0 20px 20px rgba(0,0,0,.15);
+	}
+	
+	footer{text-align:center;
+	color: #0000FF;}
+	footer a{ color: red; }
+    footer a:active { color: #ffff00; }
+	footer hr{	width:75%;}

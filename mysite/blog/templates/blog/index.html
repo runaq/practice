@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="content_index">
+<p>Вы, может быть, удивитесь, но оказывается, продукты имеют не только витаминную ценность, но их полезность зависит еще и от цвета. Мало того, даже свет освещения на кухне может изменить вкус привычных блюд. Так, при зеленых, синих и красных лампах сладкое кажется пресным, кислое – горьким. А все потому, что вкусовые рецепторы работают в связке со зрительными, а это значит что, не только вкус, но и цвет пищи имеет значение.</p>
+</div>    
+	{% for i in colors %}
+	    <div class="content_index">
+		    <h2><a href="{% url 'posti_list' colorid=i.id %}"><span style="color:#{{ i.color_number }}">{{ i.name_color }}</a></h2>
+            <p>{{ i.text}}</p>
+			
+		
+            
+        </div>
+    {% endfor %}
+<p>Скопировано с http://tvoyaizuminka.ru/zdorove/poleznie_produkti/kak-tsvet-pishhi-vliyaet-na-organizm/</p>
+{% endblock content %}

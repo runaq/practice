@@ -112,3 +112,14 @@
 	footer a{ color: red; }
     footer a:active { color: #ffff00; }
 	footer hr{	width:75%;}
+
+    img{
+        height:auto;
+        width:400px;
+        margin:10px 20px;
+   }
+     
+    p{
+        text-align:justify;
+        text-indent:40px;
+}

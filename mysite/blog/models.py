@@ -17,8 +17,8 @@ class Post(models.Model):
 	text = models.TextField( verbose_name='Описание')
 	created_date = models.DateTimeField(default=timezone.now, verbose_name='Дата создания')
 	published_date = models.DateTimeField(blank=True, null=True, verbose_name='Дата публикации')
-	image = models.ImageField(blank=True, upload_to='../media/', help_text='150x150px', verbose_name='Ссылка картинки')
-
+	image = models.ImageField(blank=True, help_text='150x150px', verbose_name='Ссылка картинки')
+    
 	
 	def publish(self):
 		self.published_date = timezone.now()
@@ -26,6 +26,14 @@ class Post(models.Model):
 	
 	def __str__(self):
 		return self.title
+		
+	def image_img(self):
+		if self.image:
+			return u'<a href="{0}" target="_blank"><img src="{0}" width="100 px"/></a>'.format(self.image.url)
+		else:
+			return '(Нет изображения)'
+	image_img.short_description = 'Картинка'
+	image_img.allow_tags = True
 		
 class Comment(models.Model):
     post = models.ForeignKey('blog.Post', related_name='comments', verbose_name='Выберите цвет')

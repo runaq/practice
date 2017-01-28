@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils import timezone
+from tinymce.models import HTMLField
+
 
 class Color(models.Model):
 	id = models.AutoField( primary_key=True)
@@ -14,10 +16,10 @@ class Post(models.Model):
 	author = models.ForeignKey('auth.User', verbose_name='Автор')
 	title = models.CharField(max_length=200, verbose_name='Название фрукта')
 	color = models.ForeignKey(Color, to_field='name_color', verbose_name='Цвет')
-	text = models.TextField( verbose_name='Описание')
+	text = HTMLField( verbose_name='Описание')
 	created_date = models.DateTimeField(default=timezone.now, verbose_name='Дата создания')
 	published_date = models.DateTimeField(blank=True, null=True, verbose_name='Дата публикации')
-	image = models.ImageField(blank=True, help_text='150x150px', verbose_name='Ссылка картинки')
+	image = models.ImageField(blank=True,  help_text='150x150px', verbose_name='Ссылка картинки')
     
 	
 	def publish(self):
@@ -38,10 +40,11 @@ class Post(models.Model):
 class Comment(models.Model):
     post = models.ForeignKey('blog.Post', related_name='comments', verbose_name='Выберите цвет')
     author = models.CharField(max_length=200, verbose_name='Автор комментария')
-    text = models.TextField( verbose_name='Комментарий')
+    text = HTMLField( verbose_name='Комментарий')
     created_date = models.DateTimeField(default=timezone.now, verbose_name='Дата комментария')
     approved_comment = models.BooleanField(default=False, verbose_name='Утвержден')
 
+	
     def approve(self):
         self.approved_comment = True
         self.save()

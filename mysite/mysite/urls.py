@@ -6,6 +6,7 @@ from django.contrib.auth import views
 
 urlpatterns = [
    url(r'^admin/', include(admin.site.urls)),
+   url(r'^shop/', include('shop.urls')),
    url(r'', include('blog.urls')),
    url(r'^tinymce/', include('tinymce.urls')),
    url(r'^accounts/login/$', views.login, name='login'),

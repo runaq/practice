@@ -3,7 +3,6 @@
 	background: url(../img/right.jpg) , url(../img/left.jpg);
 	background-repeat: repeat-y, repeat-y;
     background-position: left, right;
-
 	}
 	
 	.login{
@@ -28,9 +27,7 @@
     .page-header.knopki{
 	font-size:400px;
 	}
-    .content {
-        margin: 0 40px;
-    }
+    
 
     h1  {
         font-family: 'Lobster', cursive;
@@ -84,7 +81,7 @@
 	.comment {
     margin: 20px 0px 20px 20px;
 }
-
+.menu_index p{float:left}
     .content_index p{
 	font-size:24px;
 	text-indent:50px;
@@ -108,8 +105,18 @@
 	}
 	
 	footer{text-align:center;
-	color: #0000FF;}
-	footer a{ color: red; }
+	background: url(../img/fruits.jpg) no-repeat center;
+    margin-top: 0;
+	background-color: #ff9400;
+    padding: 50px 20px 50px 40px;
+	min-height:40%;
+	filter: alpha(Opacity=50);
+    opacity: 0.50%; 
+	color: #0000FF;
+	
+	}
+	footer h4{color:white;}
+	footer a{ color: white; }
     footer a:active { color: #ffff00; }
 	footer hr{	width:75%;}
 
@@ -123,3 +130,19 @@
         text-align:justify;
         text-indent:40px;
 }
+
+@media (max-width: 768px) { 
+body{background: none;}
+}
+
+.panel {
+    margin-bottom: 20px;
+    background-color: #aaa;
+	}
+
+.panel img{
+max-width:100%;
+width:100%;
+margin:0;
+height:auto;}
+
